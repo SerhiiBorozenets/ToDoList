@@ -2,8 +2,12 @@
 
 one:
   name: MyString
-  status: MyString
+  completed: 
+  status: 1
+  project: one
 
 two:
   name: MyString
-  status: MyString
+  completed: 
+  status: 1
+  project: two

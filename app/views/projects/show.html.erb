@@ -1,9 +1,58 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @project.name %>
+   <%= @project.name %>
+   <%= link_to 'Edit Project', edit_project_path(@project) %>
+   <%= link_to 'Destroy Project', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+
+  <%= form_for @task do |form| %>
+
+    <%= form.hidden_field :project_id, value: @project.id %>
+
+    <%= form.text_field :name %>
+
+    <%= form.select :status, Task.statuses.keys.to_a %>
+
+    <%= form.label :completed %>
+
+    <%= form.check_box :completed %>
+
+    <%= form.submit "Add Task" %>
+
+
+  <% end %>
+
+
+
+<table class="table table-bordered">
+  <tbody>
+  <% @tasks.each do |task| %>
+    <% if task.completed %>
+      <tr class="table-secondary d-flex">
+        <td class="col-1">Done</td>
+        <td class="col-8 striker"><%=  task.name %></td>
+        <td class="col-3">
+          <%= task.status %>
+          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-sm btn-outline-info" %>
+          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger" %>
+        </td>
+    <% else %>
+      <tr class="d-flex">
+        <td class="col-1"> In work </td>
+        <td class="col-8"><%= task.name %></td>
+        <td class="col-3">
+          <%= task.status %>
+          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-sm btn-outline-info" %>
+          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger" %>
+        </td>
+    <% end %>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>
+
+
+<p><%= link_to 'Back', projects_path %></p>
