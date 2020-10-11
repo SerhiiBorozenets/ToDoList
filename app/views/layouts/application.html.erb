@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToDOlist</title>
+    <title>ToDoList</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+
+  <div class="container">
+    <div class="text-center mt-3 mb-3">
+      <h2>SIMPLE TODO LIST</h2>
+    </div>
+
+    <body>
+      <%= yield %>
+    </body>
+  </div>
+
 </html>
