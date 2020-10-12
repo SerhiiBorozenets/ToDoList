@@ -1,13 +1,16 @@
-<div class="card w-50">
-  <div class="card-body bg-light">
-    <h1 class="card-title text-center text-primary">Editing Project</h1>
+<div class="container">
+  <div class="bp-card mb-5 mx-auto" style="max-width: 700px;">
 
-    <%= render 'form', project: @project %>
+    <div class="card-body bg-light">
+      <h1 class="card-title text-center text-primary">Editing Project</h1>
 
-    <br>
-    <%= link_to 'Show Project Details', @project, class: "btn btn-sm btn-outline-info" %>
-    <%= link_to 'Back', projects_path, class: "btn btn-sm btn-outline-info" %>
+      <%= render 'form', project: @project %>
+
+      <br>
+      <%= link_to 'Show Project Details', @project, class: "btn btn-sm btn-outline-info" %>
+      <%= link_to 'Back', projects_path, class: "btn btn-sm btn-outline-info" %>
+
+    </div>
 
   </div>
-
 </div>

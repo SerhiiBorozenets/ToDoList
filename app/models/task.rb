@@ -4,6 +4,6 @@ class Task < ApplicationRecord
 
   enum status: { high: 2, medium: 1, low: 0 }
 
-  default_scope {order ('tasks.status DESC')}
+  default_scope { order ('completed ASC, tasks.status DESC') }
 
 end
