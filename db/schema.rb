@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_10_12_103154) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -20,9 +23,9 @@ ActiveRecord::Schema.define(version: 2020_10_12_103154) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.integer "status"
-    t.integer "project_id", null: false
+    t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "deadline"

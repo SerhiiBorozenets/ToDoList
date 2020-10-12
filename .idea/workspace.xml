@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="196716e4-992c-470b-8a24-bf953e96588e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -415,12 +412,12 @@
       <workItem from="1602242276066" duration="178000" />
       <workItem from="1602242485778" duration="89384000" />
       <workItem from="1602504566456" duration="298000" />
-      <workItem from="1602520512592" duration="5864000" />
+      <workItem from="1602520512592" duration="6061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95724000" />
+    <option name="totallyTimeSpent" value="95921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="119" y="98" width="1315" height="815" extended-state="0" />
