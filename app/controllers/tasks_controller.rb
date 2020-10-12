@@ -13,15 +13,15 @@ class TasksController < ApplicationController
   def create
     @task = Task.create(task_params)
 
-    if @task.save
-
-       redirect_to projects_path(@task.project_id)
-
-    else
-
-      redirect_to root_path
-
+    respond_to do |format|
+      if @task.save
+        format.html { redirect_to project_path(@task.project_id), notice: 'Task was successfully saved.' }
+        format.json { render :show, status: :ok, location: @task  }
+      else
+        redirect_to root_path
+      end
     end
+
   end
 
   #PATCH/PUT /tasks/1

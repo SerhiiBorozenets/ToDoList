@@ -1,5 +1,12 @@
-<h1>New Project</h1>
+<div class="card w-50">
+  <div class="card-body bg-light">
+    <h1 class="card-title text-center text-primary">New Project</h1>
 
-<%= render 'form', project: @project %>
+    <%= render 'form', project: @project %>
 
-<%= link_to 'Back', projects_path %>
+    <br>
+    <%= link_to 'Back', projects_path, class: "btn btn-sm btn-outline-info" %>
+
+  </div>
+
+</div>
