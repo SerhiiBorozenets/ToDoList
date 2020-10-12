@@ -12,6 +12,11 @@
     <%= form.label :completed %>
     <%= form.check_box :completed %>
   </div>
+  <div class="field">
+    <%= form.label :deadline %>
+    <%= form.date_field :deadline, "data-provide": 'datepicker' %>
+  </div>
+
   <div class="action">
     <%= form.submit%>
   </div>

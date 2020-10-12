@@ -14,7 +14,8 @@
         <% if task.completed %>
           <tr class="table-secondary d-flex">
             <td class="col-1">Done</td>
-            <td class="col-8 striker"><%=  task.name %></td>
+            <td class="col-2 striker">Deadline <%= task.deadline %></td>
+            <td class="col-6 striker"><%=  task.name %></td>
             <td class="col-3">
               <%= task.status %>
               <%= link_to 'Edit', edit_task_path(task), class: "btn btn-sm btn-outline-info" %>
@@ -23,7 +24,8 @@
         <% else %>
           <tr class="d-flex">
             <td class="col-1"> In work </td>
-            <td class="col-8"><%= task.name %></td>
+            <td class="col-2">Deadline <%= task.deadline %></td>
+            <td class="col-6"><%= task.name %></td>
             <td class="col-3">
               <%= task.status %>
               <%= link_to 'Edit', edit_task_path(task), class: "btn btn-sm btn-outline-info" %>
