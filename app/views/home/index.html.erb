@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card mb-4 mt-4  bg-light mx-auto" style="max-width: 600px;">
+
+    <div class="row mb-4 mt-4 text-center text-info">
+      <div class="col ml-4 mr-3">
+
+        <% if user_signed_in? %>
+          <div>To continue work please press the button </div>
+          <div class="btn">
+            <%= link_to 'Continue', projects_path, class: "btn btn-lg btn-outline-info" %>
+          </div>
+
+        <% else %>
+          <h2>Please pass authentication to be able to create and view projects and tasks!</h2>
+
+          <div class="btn">
+            <%= link_to 'Sing up', new_user_registration_path, class: "btn btn-lg btn-outline-info" %>
+          </div>
+
+          <div class="btn">
+            <%= link_to 'Sing in', new_user_session_path, class: "btn btn-lg btn-outline-info" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

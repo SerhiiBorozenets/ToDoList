@@ -1,0 +1,72 @@
+
+<%= render "devise/shared/error_messages", resource: resource %>
+
+<body>
+<div id="login">
+
+  <div class="container">
+    <div id="login-row" class="row justify-content-center align-items-center">
+      <div id="login-column" class="col-md-6">
+        <div id="login-box" class="col-md-12">
+
+            <h3 class="text-center text-info mt-3">Sign up</h3>
+            <div class="form-group">
+
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+                <div class="form-group">
+                  <%= f.label :email, class: "text-info" %><br />
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :password, class: "text-info" %>
+                  <% if @minimum_password_length %>
+                    <em class="text-info">(<%= @minimum_password_length %> characters minimum)</em>
+                  <% end %><br />
+                  <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :password_confirmation, class: "text-info" %><br />
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.submit "Sign up", class: "btn btn-info btn-md" %>
+                </div>
+              <% end %>
+
+            </div>
+          </card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 100px;
+    max-width: 600px;
+    height: 380px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+</style>
+
+

@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-    <% @projects.each do |project| %>
+  <% @projects.each do |project| %>
+    <% if project.user == current_user %>
 
-  <div class="container">
-    <div class="card mb-4 mt-4  bg-light mx-auto" style="max-width: 700px;">
-      <div class="row mb-4 mt-4">
-         <div class="col ml-4"><%= project.name %></div>
-         <div class="col text-right mr-2"><%= link_to 'Show Details snd Tasks', project , class: "btn btn-sm btn-outline-success" %>
-         <%= link_to 'Edit', edit_project_path(project), class: "btn btn-sm btn-outline-info" %>
-         <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger" %></div>
+      <div class="container">
+        <div class="card mb-4 mt-4  bg-light mx-auto" style="max-width: 700px;">
+          <div class="row mb-4 mt-4">
+             <div class="col ml-4"><%= project.name %></div>
+             <div class="col text-right mr-2"><%= link_to 'Show Details snd Tasks', project , class: "btn btn-sm btn-outline-success" %>
+             <%= link_to 'Edit', edit_project_path(project), class: "btn btn-sm btn-outline-info" %>
+             <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger" %></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
     <% end %>
+  <% end %>
+      <div class="card mb-4 mt-4 bg-light mx-auto" style="max-width: 700px;">
+        <%= link_to 'Add New Project', new_project_path, class: "btn btn-sm btn-outline-info"  %>
+      </div>
 
-  <div class="card mb-4 mt-4 bg-light mx-auto" style="max-width: 700px;">
-    <%= link_to 'Add New Project', new_project_path, class: "btn btn-sm btn-outline-info"  %>
-  </div>
+
+
+
+
