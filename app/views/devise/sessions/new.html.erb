@@ -1,6 +1,6 @@
 <div class="container" style="max-width: 400px;">
   <div class="card mb-4 mt-4  bg-light mx-auto" style="max-width: 400px;">
-    <div class="row ml-3 mb-4 mt-4 text-info">
+    <div class="row ml-5 mb-4 mt-4 text-info">
       <div class="col-auto mb-4 mt-4">
             <h3 class="text-center text-info">Login</h3>
             <div class="form-group">
@@ -20,7 +20,6 @@
                   <div class="form-group">
                     <%= f.label :remember_me, class: "text-info" %>
                     <%= f.check_box :remember_me %>
-                    <%= link_to "Forgot your password?", new_password_path(resource_name), class: "text-muted"%>
                   </div>
                 <% end %>
 
