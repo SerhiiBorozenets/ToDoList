@@ -27,7 +27,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'devise'
 
 group :development, :test do
